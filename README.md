@@ -1,23 +1,16 @@
 #  Redmi 6 Review Analysis Automation
 
-This project automates the sentiment analysis and summarization of Redmi 6 customer reviews using AI. It reads reviews from a Google Sheet, uses the Cohere API for analysis, updates the sheet with results, and generates a pie chart summarizing sentiment distribution.
+An end-to-end automation pipeline that performs sentiment classification and AI-powered summarization of customer reviews stored in Google Sheets.
+The system integrates the Cohere LLM API with Google Sheets to automate review analysis, update structured outputs, and generate visual sentiment insights — eliminating manual review processing.
 
 ## Project Overview
-
- - Authenticate with Google Sheets using a service account.
-
- - Read customer reviews from the sheet.
-
- - Use Cohere AI (command-r-plus model) to:
-
- -  Analyze review sentiment (Positive, Negative, Neutral).
-
- - Summarize each review in one sentence.
-
- - Write the AI-generated results back into the Google Sheet.
-
- - Generate a pie chart visualizing sentiment distribution.
-
+- Service account authentication with Google Sheets API
+- Automated ingestion of customer review data
+- LLM-powered sentiment classification and one-line summarization
+- Structured output writing back to the sheet
+- Sentiment aggregation and visualization using Matplotlib
+  
+This design demonstrates API integration, LLM workflow automation, and data reporting in a single pipeline.
 
 ## Technologies Used
 
@@ -63,23 +56,22 @@ pip install gspread oauth2client cohere matplotlib
 
 ## Deliverables
 
-- Python script that automates sentiment analysis and summarization.
+- Updated Google Sheet containing:
+- Sentiment classification
+- AI-generated summary
+- Action-needed indicator
+- Automatically generated pie chart showing sentiment distribution
+- Structured dataset ready for reporting or decision-making
 
-- Updated Google Sheet with:
 
-- Sentiment, summary, and action needed columns.
+## Potential Enhancements 
 
-- Pie chart of sentiment distribution.
+- Batch processing optimization for large datasets
+- Deployment as a scheduled cloud function
+- Dashboard integration (Power BI or Streamlit)
+- Persistent logging and error monitoring
+- Support for multi-product sentiment tracking
 
-- Screenshot of the updated Google Sheet.
-  
-
-## Contributors
-
-- Ogechukwu Okoli
-
-- Osuala Emmanuella
-
-## Acknowledgment
-
-This project was developed as part of the Data Epic Mentorship Program (2025 Cohort).
+## Author
+Emmanuella Osuala
+Data Analyst | Automation & LLM Workflow Design
